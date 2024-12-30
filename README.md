@@ -19,6 +19,16 @@ import 'package:loader_overlay_helper/loader_overlay_mixin.dart';
 GetMaterialApp(/* */).wrapWithGlobalLoaderOverlay();
 ```
 
+use custome widget
+
+```
+GetMaterialApp(/* */).wrapWithGlobalLoaderOverlay(loadingOverlayReplace: LoadingOverlayWidgetTemplat(
+    loadingMessage:"", //loading message
+    progress:"", // update loding message progress
+    lodingAssetPath:""// loding page icon
+) );
+```
+
 ## useage 
 
 ``` 
