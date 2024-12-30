@@ -1,5 +1,12 @@
 # loader_overlay_helper
 
+## install 
+add this to pubspec.yaml
+```
+loader_overlay_helper:
+  git: https://github.com/taghassan/loader_overlay_helper.git
+```
+
 ## import 
 ```
 import 'package:loader_overlay_helper/loader_overlay_extensions.dart';
