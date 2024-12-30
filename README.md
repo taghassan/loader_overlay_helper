@@ -1,11 +1,37 @@
 # loader_overlay_helper
 
-A new Flutter project.
+## import 
+```
+import 'package:loader_overlay_helper/loader_overlay_extensions.dart';
+import 'package:loader_overlay_helper/loader_overlay_mixin.dart';
+```
 
-## Getting Started
+## initialization
 
-For help getting started with Flutter development, view the online
-[documentation](https://flutter.dev/).
+```
+GetMaterialApp(/* */).wrapWithGlobalLoaderOverlay();
+```
 
-For instructions integrating Flutter modules to your existing applications,
-see the [add-to-app documentation](https://flutter.dev/to/add-to-app).
+## useage 
+
+``` 
+class Name with LoaderOverlayMixin {
+
+ void testLoaderOverlay() {
+   showLoading();
+   Future.delayed(Duration(seconds: 2),() {
+     loadingAddProgress(progress: "this is progress step 1");
+   },);
+   Future.delayed(Duration(seconds: 4),() {
+     loadingAddProgress(progress: "this is progress step 2");
+   },);
+   Future.delayed(Duration(seconds: 6),() {
+     loadingAddProgress(progress: "this is progress step 3");
+   },);
+   Future.delayed(Duration(seconds: 8),() {
+     hideLoading();
+   },);
+  }
+
+}
+```
